@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký tài khoản</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container" style="max-width: 500px; margin-top: 50px;">
+    <h2 class="text-center">Đăng ký tài khoản</h2>
+
+    <!-- Hiển thị thông báo -->
+    <c:if test="${alert != null}">
+        <div class="alert alert-danger">${alert}</div>
+    </c:if>
+
+    <!-- Form đăng ký -->
+    <form action="${pageContext.request.contextPath}/register" method="post">
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control" placeholder="Nhập email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Tài khoản</label>
+            <input type="text" name="username" class="form-control" placeholder="Nhập tài khoản" required>
+        </div>
+
+        <div class="form-group">
+            <label>Họ tên</label>
+            <input type="text" name="fullname" class="form-control" placeholder="Nhập họ tên" required>
+        </div>
+
+        <div class="form-group">
+            <label>Mật khẩu</label>
+            <input type="password" name="password" class="form-control" placeholder="Nhập mật khẩu" required>
+        </div>
+
+        <div class="form-group">
+            <label>Số điện thoại</label>
+            <input type="text" name="phone" class="form-control" placeholder="Nhập số điện thoại" required>
+        </div>
+
+        <button type="submit" class="btn btn-success btn-block">Đăng ký</button>
+    </form>
+
+    <p class="text-center" style="margin-top: 15px;">
+        Đã có tài khoản? <a href="${pageContext.request.contextPath}/login">Đăng nhập ngay</a>
+    </p>
+</div>
+</body>
+</html>
