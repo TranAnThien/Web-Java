@@ -69,3 +69,46 @@ Bài tập tuần 2 (Java Servlet + JDBC).
   - Đăng nhập với `home/123456` → hiện Trang Người dùng.  
 
 ---
+
+# Bài tập Tuần 3 - Quên mật khẩu, Quản lý Category (CRUD)
+
+## Mô tả
+Bài tập tuần 3 (Java Servlet + JDBC + JSP).  
+- Bổ sung chức năng **Quên mật khẩu**.  
+- Thêm module **Quản lý Category (Danh mục)** với đầy đủ CRUD.  
+- Dữ liệu Category gắn với từng User trong bảng `Users`.
+
+## Tài khoản test
+- Username: `home`
+- Password: `123`
+
+## Chức năng
+
+### Quên mật khẩu
+- Tại trang đăng nhập, có nút **Quên mật khẩu**.  
+- Nhập email → kiểm tra trong database:  
+  - Nếu không tồn tại → hiển thị lỗi.  
+  - Nếu tồn tại → chuyển sang đặt lại mật khẩu mới.  
+- Nhập mật khẩu mới và xác nhận mật khẩu → cập nhật trong bảng `Users`.  
+- Sau khi đổi mật khẩu thành công → chuyển về trang đăng nhập.
+
+### Quản lý Category (CRUD)
+- **Thêm**: nhập `cateName`, `icons`, lưu vào bảng `Category` với `user_id` là người đang đăng nhập.  
+- **Sửa**: chọn 1 category, hiển thị form sửa, cập nhật lại database.  
+- **Xóa**: chọn 1 category, xác nhận xóa, databse xóa bản ghi.  
+- **Danh sách**: hiển thị tất cả category thuộc user đang đăng nhập, gồm: STT, Icon, Tên danh mục, Hành động (Sửa/Xóa).
+
+## Kết quả mong đợi
+
+### Quên mật khẩu
+- Nhập email hợp lệ → đặt lại mật khẩu thành công.  
+- Nhập email không tồn tại → báo lỗi.  
+- Nhập 2 mật khẩu không trùng → yêu cầu nhập lại.
+
+### CRUD Category
+- Đăng nhập bằng user `home/123` → vào `/home` hiển thị danh sách category đã có.  
+- Thêm mới → danh mục hiển thị ngay.  
+- Sửa → cập nhật dữ liệu trong database.  
+- Xóa → bản ghi biến mất khỏi database.  
+
+---
