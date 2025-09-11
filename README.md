@@ -112,3 +112,47 @@ Bài tập tuần 3 (Java Servlet + JDBC + JSP).
 - Xóa → bản ghi biến mất khỏi database.  
 
 ---
+
+# Bài tập Tuần 4 - SiteMesh + Bootstrap và Cập nhật Profile
+
+## Mô tả
+Bài tập tuần 4 (Java Servlet + JSP + JPA + SiteMesh + Bootstrap).  
+- Tích hợp **SiteMesh** để quản lý layout (header, sidebar, footer) dùng chung.  
+- Áp dụng **Bootstrap** để thiết kế giao diện quản trị.  
+- Xây dựng chức năng **Cập nhật Profile**.  
+
+## Tài khoản test
+- Username: `admin`  
+- Password: `123456`  
+
+## Chức năng
+
+### SiteMesh + Bootstrap
+- Tích hợp **SiteMesh 3** để định nghĩa layout chung qua decorator:  
+  - `header.jsp`: thanh điều hướng trên.  
+  - `sidebar.jsp`: menu chức năng bên trái.  
+  - `footer.jsp`: phần chân trang.  
+- Toàn bộ trang trong `/admin/*` đều render qua layout này.  
+- Giao diện được xây dựng bằng **Bootstrap 5**, sử dụng các template: Dashboard, Charts, Tables, Login.  
+
+### Cập nhật Profile
+- Người dùng chỉnh sửa thông tin cá nhân: `fullname`, `email`, `phone`, `avatar`.  
+- **Upload avatar**:  
+  - Chọn ảnh từ máy tính.  
+  - Ảnh lưu trong thư mục `uploads/`.  
+  - CSDL cập nhật đường dẫn ảnh.  
+  - Trang Profile hiển thị ảnh mới ngay sau khi lưu thay đổi.  
+- Giới hạn kích thước ảnh: tối đa 10MB.  
+
+## Kết quả mong đợi
+
+### SiteMesh + Bootstrap
+- Các trang quản trị có giao diện đồng bộ, header/sidebar/footer được dùng chung.  
+- Giao diện trực quan, responsive nhờ Bootstrap.  
+
+### Cập nhật Profile
+- Người dùng cập nhật thông tin thành công, dữ liệu lưu trong database.  
+- Ảnh đại diện hiển thị đúng ảnh vừa upload.  
+- Nếu upload file sai định dạng hoặc vượt dung lượng → báo lỗi.  
+
+---
