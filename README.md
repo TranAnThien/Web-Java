@@ -156,3 +156,48 @@ Bài tập tuần 4 (Java Servlet + JSP + JPA + SiteMesh + Bootstrap).
 - Nếu upload file sai định dạng hoặc vượt dung lượng → báo lỗi.  
 
 ---
+
+# Bài tập Tuần 5 - CRUD User và Video bằng JPA trong role Admin
+
+## Mô tả
+Bài tập tuần 5 (Java Servlet + JSP + JPA + SiteMesh + Bootstrap).  
+- Xây dựng module **Quản lý Người dùng (User)** và **Quản lý Video (Video)**.  
+- Thực hiện đầy đủ các thao tác CRUD (Create, Read, Update, Delete).  
+
+## Tài khoản test
+- Username: `admin`  
+- Password: `123456`  
+
+## Chức năng
+
+### Quản lý User (CRUD)
+- **Danh sách**: hiển thị toàn bộ người dùng với các thông tin: Avatar, Username, Fullname, Email, Phone, Role, CreatedDate.  
+- **Thêm**: nhập thông tin User mới (username, password, fullname, email, phone, avatar, roleid), lưu vào bảng `Users`.  
+- **Sửa**: cập nhật thông tin người dùng (trừ ngày tạo). Có thể thay đổi role, avatar, mật khẩu.  
+- **Xóa**: xóa người dùng khỏi database.  
+- **Tìm kiếm**: tìm theo `username`.  
+
+### Quản lý Video (CRUD)
+- **Danh sách**: hiển thị toàn bộ video với các thông tin: Poster, Tiêu đề, Mô tả, Danh mục (Category), Lượt xem, Trạng thái.  
+- **Thêm**: nhập tiêu đề, mô tả, poster, chọn category từ combobox, lưu vào bảng `Videos`.  
+- **Sửa**: chỉnh sửa thông tin video (tiêu đề, mô tả, poster, trạng thái, category).  
+- **Xóa**: xóa video khỏi database.  
+- **Tìm kiếm**: tìm video theo tiêu đề.  
+
+## Kết quả mong đợi
+
+### Quản lý User
+- Vào menu **User** trong sidebar → hiển thị danh sách người dùng.  
+- Thêm mới → User được lưu vào database, hiển thị ngay trong danh sách.  
+- Sửa → dữ liệu thay đổi chính xác trong database.  
+- Xóa → bản ghi người dùng biến mất khỏi danh sách.  
+- Tìm kiếm → hiển thị danh sách user phù hợp với từ khóa.  
+
+### Quản lý Video
+- Vào menu **Video** trong sidebar → hiển thị danh sách video.  
+- Thêm mới → video được thêm vào database, hiển thị đúng category.  
+- Sửa → cập nhật thông tin video thành công.  
+- Xóa → video bị xóa khỏi database.  
+- Tìm kiếm → hiển thị danh sách video khớp tiêu đề tìm kiếm.  
+
+---
