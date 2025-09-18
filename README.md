@@ -201,3 +201,53 @@ Bài tập tuần 5 (Java Servlet + JSP + JPA + SiteMesh + Bootstrap).
 - Tìm kiếm → hiển thị danh sách video khớp tiêu đề tìm kiếm.  
 
 ---
+
+# Bài tập Tuần 5 - Bài tập 2: CRUD và Tìm kiếm phân trang Category với Spring Boot + Thymeleaf
+
+## Mô tả
+Bài tập tuần 5 (Spring Boot + JPA + Thymeleaf + Thymeleaf Layout Dialect).  
+- Xây dựng module **Quản lý Category (Danh mục)**.  
+- Thực hiện đầy đủ CRUD.  
+- Bổ sung chức năng **Tìm kiếm có phân trang**.  
+- Giao diện sử dụng **Thymeleaf** kết hợp **Thymeleaf Layout Dialect** để tái sử dụng layout.
+
+## Cấu trúc trang
+- **Header**: chứa ảnh sinh viên.  
+- **Navbar**: menu chức năng (Categories, Search & Paging).  
+- **Content**: hiển thị nội dung chính (list, add/edit, search, search + paging).  
+- **Footer**: thông tin sinh viên thực hiện.  
+
+## Chức năng
+
+### Quản lý Category (CRUD)
+- **Danh sách**: hiển thị toàn bộ category.  
+- **Thêm**: nhập `categoryName`, `images` và lưu vào bảng `Category`.  
+- **Sửa**: chỉnh sửa tên hoặc ảnh danh mục. Nếu ảnh để trống khi sửa thì giữ nguyên ảnh cũ.  
+- **Xóa**: xóa category khỏi database.  
+
+### Tìm kiếm + Phân trang
+- **Tìm kiếm**: theo tên danh mục (không phân biệt hoa thường).  
+- **Phân trang**: cho phép chọn kích thước trang (3, 5, 10, 15, 20).  
+- **Điều hướng trang**: hiển thị số trang, chuyển đến trang đầu/cuối.  
+
+## Kết quả mong đợi
+
+### CRUD Category
+- Vào menu **Categories** → hiển thị danh sách.  
+- Thêm mới → danh mục lưu thành công, hiển thị ngay trong danh sách.  
+- Sửa → dữ liệu thay đổi chính xác trong database.  
+- Xóa → bản ghi biến mất khỏi danh sách.  
+
+### Search & Paging
+- Vào menu **Search & Paging** → hiển thị form tìm kiếm + bảng kết quả.  
+- Nhập từ khóa → danh sách lọc đúng theo tên danh mục.  
+- Thay đổi page size → bảng cập nhật theo kích thước mới.  
+- Chuyển trang → hiển thị đúng dữ liệu của trang được chọn.  
+
+## Công nghệ sử dụng
+- **Spring Boot 3.5.x**  
+- **Spring Data JPA** (SQL Server 2012 Dialect)  
+- **Thymeleaf + Thymeleaf Layout Dialect**  
+- **Bootstrap 5** cho giao diện.  
+
+---
